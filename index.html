@@ -794,20 +794,23 @@ $(document).ready(function(){
 				{
 					var idpadre = $(this).find(':selected').val();
 					$("#divResultados").html("Cargando...");
-					$.ajax({url: 'http://www.creatividata.com/www/ocbp.mov/ws/lstCtgServicios.php?cat='+idpadre, success: function(result){
+					$.ajax({url: 'http://www.creatividata.com/www/ocbp.mov/ws/lstCtgServicios.php?nvl=cat&cat='+idpadre, success: function(result){
 						$("#divResultados").html(result);
 					}});
-																																											//$("#divResultados").load('http://www.creatividata.com/www/ocbp.mov/ws/lstCtgServicios.php?nvl=cat&cat='+idpadre);
 				});
 
 				$(document).on("change","#mnuEspecialidades",function(event)
 				{
 					var id = $(this).find(':selected').val();
 					$("#divResultados").html("Cargando...");
-					$.ajax({url: 'http://www.creatividata.com/www/ocbp.mov/ws/lstCtgServicios.php?cat='+id, success: function(result){
-						$("#divResultados").html(result);
-					}});
-																																																//$("#divResultados").load('http://www.creatividata.com/www/ocbp.mov/ws/lstCtgServicios.php?nvl=cat&cat='+id);
+					$.ajax({url: 'http://www.creatividata.com/www/ocbp.mov/ws/lstCtgServicios.php?nvl=cat&cat='+id, 
+						success: function(result){
+							$("#divResultados").html(result);
+						}
+						error: function(result){
+				            $("#divResultados").html(result);
+				        }						
+					});
 				});
 				
 				$( "#mnuEspecialidades" ).hide();
