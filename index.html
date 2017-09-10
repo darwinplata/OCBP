@@ -798,9 +798,9 @@ $(document).ready(function(){
 						success: function(result){
 							$("#divResultados").html(result);
 						},
-						error: function(result){
-				            $("#divResultados").html(result);
-				        } 
+						error: function(jqXHR, textStatus, errorThrown) {
+							$("#divResultados").html("Error detectado: " + textStatus + "\nExcepcion: " + errorThrown);
+						}						
 					});
 				});
 
@@ -812,9 +812,9 @@ $(document).ready(function(){
 						success: function(result){
 							$("#divResultados").html(result);
 						},
-						error: function(result){
-				            $("#divResultados").html(result);
-				        }						
+						error: function(jqXHR, textStatus, errorThrown) {
+							$("#divResultados").html("Error detectado: " + textStatus + "\nExcepcion: " + errorThrown);
+						}						
 					});
 				});
 				
