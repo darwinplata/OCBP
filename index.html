@@ -798,9 +798,17 @@ $(document).ready(function(){
 						success: function(result){
 							$("#divResultados").html(result);
 						},
-						error: function(jqXHR, textStatus, errorThrown) {
+						error: function(xhr) {
+							var response = xhr.responseText;
+							//console.log(response);
+							var statusMessage = xhr.status + ' ' + xhr.statusText;
+							var message  = 'Query failed, php script returned this status: ';
+							var message = message + statusMessage + ' response: ' + response;
+							alert(message);
+						}
+						/*error: function(jqXHR, textStatus, errorThrown) {
 							$("#divResultados").html("Error detectado: ("+jqXHR+"): " + textStatus + "\nExcepcion: " + errorThrown);
-						}						
+						}*/						
 					});
 				});
 
