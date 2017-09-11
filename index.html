@@ -799,7 +799,7 @@ $(document).ready(function(){
 							$("#divResultados").html(result);
 						},
 						error: function(jqXHR, textStatus, errorThrown) {
-							$("#divResultados").html("Error detectado: " + textStatus + "\nExcepcion: " + errorThrown);
+							$("#divResultados").html("Error detectado: ("+jqXHR+"): " + textStatus + "\nExcepcion: " + errorThrown);
 						}						
 					});
 				});
