@@ -41,6 +41,25 @@
 		<link rel="stylesheet" href="assets/css/themes/theme-style3.css" type="text/css" id="skin_color">
 		<link rel="stylesheet" href="assets/css/print.css" type="text/css" media="print"/>
 		<!-- end: CORE CSS -->
+		<script>
+				var getUrlParameter = function getUrlParameter(sParam) {
+					var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+						sURLVariables = sPageURL.split('&'),
+						sParameterName,
+						i;
+
+					for (i = 0; i < sURLVariables.length; i++) {
+						sParameterName = sURLVariables[i].split('=');
+
+						if (sParameterName[0] === sParam) {
+							return sParameterName[1] === undefined ? true : sParameterName[1];
+						}
+					}
+				};				
+		
+				var numcus = getUrlParameter('cus');
+				var tipest = getUrlParameter('est');
+		</script>
 		<link rel="shortcut icon" href="favicon.ico" />
 	</head>
 	<!-- end: HEAD -->
@@ -69,34 +88,6 @@
 			<div class="main-container inner">
 				<!-- start: PAGE -->
 				<div class="main-content">
-					<!-- start: PANEL CONFIGURATION MODAL FORM 
-					<div class="modal fade" id="panel-config" tabindex="-1" role="dialog" aria-hidden="true">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-										&times;
-									</button>
-									<h4 class="modal-title">Panel Configuration</h4>
-								</div>
-								<div class="modal-body">
-									Here will be a configuration form
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-default" data-dismiss="modal">
-										Close
-									</button>
-									<button type="button" class="btn btn-primary">
-										Save changes
-									</button>
-								</div>
-							</div>
-							<!-- /.modal-content 
-						</div>
-						<!-- /.modal-dialog 
-					</div>
-					<!-- /.modal -->
-					<!-- end: SPANEL CONFIGURATION MODAL FORM -->
 					<div class="container">
 						<!-- start: PAGE HEADER -->
 						<!-- start: TOOLBAR -->
@@ -265,123 +256,12 @@
 							<div class="col-md-12">
 								<div class="panel panel-white">
 									<div class="panel-body">
-											<div class="row">
-												<div class="col-md-12">
-													<div id="divCategorias" name="divCategorias">
-														<select id="mnuCategorias" name="mnuCategorias" class="form-control">
-														</select>
-													</div>
-													<div id="divResultados" name="divResultados" style="display:none">
-														<h4>Especialidades</h4>
-														<div class="form-group">													
-															<select id="mnuEspecialidades" name="mnuEspecialidades" class="form-control" >
-															</select>
-															<a style="display:none" id="enlServicio" name="enlServicio" class="btn btn-default" href="id=S-1" role="button">
-															</a>															
-														</div>
-													</div>	
-												</div>
+										<div class="row">
+											<div class="col-md-12">
+												<div id="divRespuesta" name="divRespuesta" >
+												</div>	
 											</div>
-											<div class="rows">
-												<br>
-												<div id="divFormulario" id="divFormulario" class="well" style="display:none" class="col-md-12">
-													<form id="frmPedido" name="frmPedido" method="post" class="form-contributor" action="payu.html">												
-														<div id="divPedido" name="divPedido">
-														</div>
-														<div class="form-group">
-															<label class="control-label">
-																Tipo Documento <span class="symbol REQUERIDOS">*</span>
-															</label>														
-															<select id="mnuTipoDoc" name="mnuTipoDoc" class="form-control">
-																<option value="1" selected>C&eacute;dula de Ciudadan&iacute;a</option>
-																<option value="2">C&eacute;dula de Extranjer&iacute;a</option>
-																<option value="3">Tarjeta de Identidad</option>
-															</select>
-														</div>
-														<div class="form-group">
-															<label class="control-label">
-																Nro. Documento <span class="symbol REQUERIDOS">*</span>
-															</label>														
-															<input id="txtDocumento" name="txtDocumento" class="form-control">
-														</div>
-														<hr>
-														<div class="form-group">
-															<label class="control-label">
-																Nombre Completo<span class="symbol REQUERIDOS">*</span>
-															</label>														
-															<input id="txtNombre" name="txtNombre" class="form-control">
-														</div>
-														<div class="form-group">
-															<label class="control-label">
-																Tel&eacute;fono celular<span class="symbol REQUERIDOS">*</span>
-															</label>														
-															<input id="txtTelefonos" name="txtTelefonos" class="form-control">
-														</div>
-														<div class="form-group">
-															<label class="control-label">
-																Correo Electr&oacute;nico<span class="symbol REQUERIDOS"></span>
-															</label>														
-															<input id="txtEmail" name="txtEmail" class="form-control">
-														</div>														
-														<div class="form-group">
-															<label class="control-label">
-																Observacion<span class="symbol REQUERIDOS"></span>
-															</label>														
-															<textarea id="txtObservacion" name="txtObservacion" class="form-control" rows="3" class="ignore"></textarea>
-														</div>	
-														<hr>
-														<div class="form-group">
-															<label class="control-label">
-																C&oacute;mo le notificaremos: <em>(seleccione al menos dos formas)</em> <span class="symbol required"></span>
-															</label>
-															<div>
-																<div class="checkbox">
-																	<label>
-																		<input type="checkbox" name="notificacion[]" value="1" class="grey" id="notificacion1" checked>
-																		Correo electr&oacute;nico															
-																	</label>
-																</div>
-																<div class="checkbox">
-																	<label>
-																		<input type="checkbox" name="notificacion[]" value="1" class="grey" id="notificacion2">
-																		Llamada telef&oacute;nica		
-																	</label>
-																</div>
-																<div class="checkbox">
-																	<label>
-																		<input type="checkbox" name="notificacion[]" value="1" class="grey" id="notificacion3">
-																		V&iacute;a Whatsapp
-																	</label>
-																</div>
-																<div class="checkbox">
-																	<label>
-																		<input type="checkbox" name="notificacion[]" value="1" class="grey" id="notificacion4">
-																		SMS (Mensaje de texto)
-																	</label>
-																</div>
-															</div>
-														</div>
-														<button id="enlReservar" name="enlReservar" class="btn btn-default" type="submit" role="button">
-															Efectuar pago <i class="fa fa-check-square-o"></i>
-														</button>
-														<a id="enlCancelar" name="enlCancelar" href="id=A-2" class="btn btn-info close-subview-button">
-															Cancelar <i class="fa fa-angle-up"></i>
-														</a><br><br>
-														
-														<div id="divValidacion" name="divValidacion">
-														</div>	
-														<div id="divValidacionErr" name="divValidacionErr" class="errorHandler alert alert-danger no-display">
-															<i class="fa fa-times-sign"></i> Existen errores en el diligenciamiento. Favor revisar. 
-														</div>
-														<div id="divValidacionExt" name="divValidacionExt" class="successHandler alert alert-success no-display"> 
-															<i class="fa fa-ok"></i> Sus datos han sido registrados exitosamente. Está usted siendo redirigido a realizar el pago...
-														</div>	
-														<div id="divValidacionErr" name="divValidacionInf" class="errorHandler alert alert-info no-display">
-															<i class="fa fa-times-sign"></i> Procesando informacion... 
-														</div>														
-													</form>													
-												</div>									
-											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -463,139 +343,20 @@
 		<script language="javascript">
 			jQuery(document).ready(function() {
 				Main.init();
-				//SVExamples.init();
-				//FormValidator.init();
-
+				$('#divRespuesta').html("Cargando...");
+				
 				$.ajax({
 						type: "POST",
-						url: 'http://www.creatividata.com/www/ocbp.mov/ws/lstCtgServicios.php?cat=L-1', 
+						url: 'http://www.creatividata.com/www/ocbp.mov/ws/lstCtgServicios.php?cat=T-'+tipest+'|'+numcus, 
 						success: function(response)
 						{
-							$('#divCategorias').html("Cargando...");
-							$('#divCategorias').html(response).fadeIn();
+							$('#divRespuesta').html(response).fadeIn();
 						},
 						error: function(jqXHR, textStatus, errorThrown) {
 							alert(textStatus); 
-							$("#divCategorias").html("Respuesta: "+response+"; Error detectado: " + textStatus + "\nExcepcion: " + errorThrown);
+							$("#divRespuesta").html("Respuesta: "+response+"; Error detectado: " + textStatus + "\nExcepcion: " + errorThrown);
 						}	
 				});
-
-				$(document).on("change","#mnuCategorias",function(event)
-				{
-					$("#divResultados").show();
-					$("#divFormulario").hide();
-					var idpadre = $(this).find(':selected').val();
-					$("#divResultados").html("Cargando...");
-					$.ajax({url: 'http://www.creatividata.com/www/ocbp.mov/ws/lstCtgServicios.php?cat='+idpadre, 
-						success: function(result){
-							$("#divResultados").html(result);
-						},
-						error: function(xhr) {
-							var response = xhr.responseText;
-							var statusMessage = xhr.status + ' ' + xhr.statusText;
-							var message  = 'Query failed, php script returned this status: ';
-							var message = message + statusMessage + ' response: ' + response;
-							alert(message);
-						}				
-					});
-				});
-
-				$(document).on("change","#mnuEspecialidades",function(event)
-				{
-					var id = $(this).find(':selected').val();
-					$("#divResultados").html("Cargando...");
-					$.ajax({url: 'http://www.creatividata.com/www/ocbp.mov/ws/lstCtgServicios.php?cat='+id, 
-						success: function(result){
-							$("#divResultados").html(result);
-							$("#mnuEspecialidades").val(id);
-						},
-						error: function(jqXHR, textStatus, errorThrown) {
-							$("#divResultados").html("Error detectado: " + textStatus + "\nExcepcion: " + errorThrown);
-						}						
-					});
-				});
-				
-				$(document).on("click","#enlServicio",function(event)
-				{					
-					$("#divFormulario").show();
-					$("#divPedido").html("Cargando...");
-					$.ajax({url: "http://www.creatividata.com/www/ocbp.mov/ws/lstCtgServicios.php?cat=S-"+ $(this).data('url'), //$(this).attr('href'), 
-						success: function(result){
-							$("#divPedido").html(result);
-						},
-						error: function(jqXHR, textStatus, errorThrown) {
-							$("#divPedido").html("Error detectado: " + textStatus + "\nExcepcion: " + errorThrown);
-						}						
-					});
-				});	
-				
-				$(document).on("click","#enlCancelar",function(event)
-				{					
-					$("#divFormulario").hide();
-					$("#frmPedido")[0].reset();
-
-				});	
-		
-				$('#frmPedido').validate({
-					ignore: ".ignore",
-					rules: {	//mnuTipoDoc: { required: true },
-								txtDocumento: { required: true, minlength: 7, maxlength: 12, number: true},
-								txtNombre: { required: true, minlength: 2, maxlength: 150},
-								txtTelefonos: { required:true, minlength: 10, maxlength: 10, number: true},
-								txtEmail: { required: true, minlength: 2, email: true},
-								txtObservacion: { required: false}
-							},
-					messages: {
-								//mnuTipoDoc: "Debe seleccionar el tipo de documento",
-								txtDocumento: "Debe escribir un numero valido de documento: Minimo 7 digitos, maximo 12.",
-								txtNombre : "Diligencie su nombre completo.",
-								txtTelefonos : "El número de celular no es correcto. Debe tener 10 digitos.",
-								txtEmail : "Debe introducir un email valido.",
-								txtObservacion : "Escriba un mensaje valido."
-							},
-					invalidHandler: function (event, validator) { //display error alert on form submit
-						var errors = validator.numberOfInvalids();
-						if (errors) {							
-							$("#divValidacionExt").hide();
-							$("#divValidacionErr").show();
-						}
-					},
-					highlight: function (element) {
-						$(element).closest('.help-block').removeClass('valid');
-						// display OK icon
-						$(element).closest('.form-group').removeClass('has-success').addClass('has-error').find('.symbol').removeClass('ok').addClass('required');
-						// add the Bootstrap error class to the control group
-					},
-					unhighlight: function (element) { // revert the change done by hightlight
-						$(element).closest('.form-group').removeClass('has-error');
-						// set error class to the control group
-					},
-					success: function (label, element) {
-						label.addClass('help-block valid');
-						// mark the current input as valid and display OK icon
-						$(element).closest('.form-group').removeClass('has-error').addClass('has-success').find('.symbol').removeClass('required').addClass('ok');
-					},
-					submitHandler: function(form) {
-						$("#divValidacionErr").hide();
-						$("#divValidacionInf").show();
-						$.ajax({
-							url: "http://www.creatividata.com/www/ocbp.mov/ws/lstCtgServicios.php?cat=P-1", 
-							type: "POST",    
-							data: $("#frmPedido").serialize(),
-							cache: false,             
-							processData: false,      
-							success: function(data) {
-								var arr = data.split('&');
-								window.location.href = "payu.html?cus="+arr[0];
-							},
-							error: function(jqXHR, textStatus, errorThrown) {
-								alert("Data: "+data+"; Error detectado: " + textStatus + "\nExcepcion: " + errorThrown);
-							}
-						});
-						return false;
-					}
-				});	
-
 			});
 		</script>
 

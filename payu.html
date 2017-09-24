@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>OCBP - Aplicaci&oacute;n M&oacute;vil</title>			
+	</head>
+	<body class="sidebar-close horizontal-menu-fixed">
+		<div align="center">
+			Emulacion pasarela de pagos<br><hr>
+			<img src="assets/images/payu.jpg" width="500"/><br><hr>
+			<img src="assets/images/epayco.jpg" width="500"/><hr>
+			<script>
+				var getUrlParameter = function getUrlParameter(sParam) {
+					var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+						sURLVariables = sPageURL.split('&'),
+						sParameterName,
+						i;
+
+					for (i = 0; i < sURLVariables.length; i++) {
+						sParameterName = sURLVariables[i].split('=');
+
+						if (sParameterName[0] === sParam) {
+							return sParameterName[1] === undefined ? true : sParameterName[1];
+						}
+					}
+				};
+
+				var numcus = getUrlParameter('cus');				
+				document.write('<a href="confcompra.html?est=fal&cus='+numcus+'">Simular compra fallida</a> | <a href="confcompra.html?est=ext&cus='+numcus+'"">Simular compra exitosa</a>');
+			</script>
+		</div>
+		
+	</body>
+</html>
+
