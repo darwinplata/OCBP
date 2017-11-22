@@ -43,13 +43,14 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <engine name="android" spec="^6.2.3" />
-    <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
-	<plugin name="cordova-plugin-customurlscheme" version="4.1.5">
-		<paramname="URL_SCHEME" value="bloemetje" />
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />	
+	<plugin name="cordova-plugin-customurlscheme" spec="~4.2.0">
+		<param name="URL_SCHEME" value="ocbpApp"/>
+		<variable name="URL_SCHEME" value="ocbpApp" />
 	</plugin>
 	<!--	
-	<plugin name="cordova-plugin-customurlscheme" spec="~4.2.0">
-		<variable name="URL_SCHEME" value="ocbpApp" />
+	<plugin name="cordova-plugin-customurlscheme" version="4.1.5">
+		<paramname="URL_SCHEME" value="ocbpApp" />
 	</plugin>
 	<feature name="Custom URL scheme">
 		<param name="id" value="cordova-plugin-customurlscheme" />
