@@ -38,8 +38,6 @@
 	
     <platform name="android">
         <allow-intent href="market:*" />
-		<allow-intent href="whatsapp://*/*" />
-		<allow-intent href="ocbpapp://*/*" />	
 		<icon src="icon.png" />
     </platform>
     <platform name="ios">
