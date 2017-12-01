@@ -33,7 +33,6 @@
 	<allow-navigation href="http://*/*" />
 	<allow-navigation href="https://*/*" />
 	<allow-navigation href="data:*" />
-	<allow-navigation href="whatsapp://*/*" />
 	<allow-navigation href="ocbpapp://*/*" />	
 	
     <platform name="android">
