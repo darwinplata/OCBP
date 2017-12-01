@@ -15,8 +15,6 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-	<allow-intent href="whatsapp://*/*" />
-	<allow-intent href="ocbpapp://*/*" />
 	
 	<!-- Creatividata: BLOQUE WHITELIST -->
 	<!-- Allow links to example.com -->
@@ -35,8 +33,6 @@
 	<allow-navigation href="http://*/*" />
 	<allow-navigation href="https://*/*" />
 	<allow-navigation href="data:*" />
-	<allow-intent href="whatsapp://*/*" />
-	<allow-intent href="ocbpapp://*/*" />
 	
     <platform name="android">
         <allow-intent href="market:*" />
