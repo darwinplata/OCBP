@@ -123,7 +123,7 @@
 						</div>
 						<!-- end: TOOLBAR -->
 						<!-- end: PAGE HEADER -->
-						<!-- start: BREADCRUMB -->
+						<!-- start: BREADCRUMB 
 						<div class="row">
 							<div class="col-md-12">
 								<ol class="breadcrumb">
@@ -139,7 +139,7 @@
 							</div>
 						</div>
 						<!-- end: BREADCRUMB -->
-						<!-- start: PAGE CONTENT -->
+						<!-- start: PAGE CONTENT 
 						<div class="row">
 							<div class="col-md-12">
 								<div class="panel uploads">
@@ -218,7 +218,7 @@
 									</div>
 								</div>
 							</div>						
-						</div>
+						</div> //-->
 						<div class="row">
 							<div class="col-md-12">
 								<div class="panel panel-white">
@@ -317,6 +317,7 @@
 						url: 'http://www.creatividata.com/www/ocbp.mov/ws/lstCtgServicios.php?cat=T-'+tipest+'|'+numcus, 
 						success: function(response)
 						{
+							alert(response);
 							$('#divRespuesta').html(response).fadeIn();
 						},
 						error: function(jqXHR, textStatus, errorThrown) {

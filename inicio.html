@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>OCBP - Aplicaci&oacute;n M&oacute;vil</title>
+		<!-- start: META -->
+		<meta charset="utf-8" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta content="" name="description" />
+		<meta content="" name="author" />
+		<!-- end: META -->
+		<!-- start: MAIN CSS -->
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,200,100,800' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/plugins/iCheck/skins/all.css">
+		<link rel="stylesheet" href="assets/plugins/perfect-scrollbar/src/perfect-scrollbar.css">
+		<link rel="stylesheet" href="assets/plugins/animate.css/animate.min.css">
+		<!-- end: MAIN CSS -->
+		<!-- start: CSS REQUERIDOS FOR SUBVIEW CONTENTS -->
+		<link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+		<link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.theme.css">
+		<link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.transitions.css">
+		<link rel="stylesheet" href="assets/plugins/summernote/dist/summernote.css">
+		<link rel="stylesheet" href="assets/plugins/fullcalendar/fullcalendar/fullcalendar.css">
+		<link rel="stylesheet" href="assets/plugins/toastr/toastr.min.css">
+		<link rel="stylesheet" href="assets/plugins/bootstrap-select/bootstrap-select.min.css">
+		<link rel="stylesheet" href="assets/plugins/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css">
+		<link rel="stylesheet" href="assets/plugins/DataTables/media/css/DT_bootstrap.css">
+		<link rel="stylesheet" href="assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.css">
+		<link rel="stylesheet" href="assets/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css">
+		<!-- end: CSS REQUERIDOS FOR THIS SUBVIEW CONTENTS-->
+		<!-- start: CSS REQUERIDOS SOLO PARA ESTA PAGINA -->
+		<!-- end: CSS REQUERIDOS SOLO PARA ESTA PAGINA -->
+		<!-- start: CORE CSS -->
+		<link rel="stylesheet" href="assets/css/styles.css">
+		<link rel="stylesheet" href="assets/css/styles-responsive.css">
+		<link rel="stylesheet" href="assets/css/plugins.css">
+		<link rel="stylesheet" href="assets/css/themes/theme-style3.css" type="text/css" id="skin_color">
+		<link rel="stylesheet" href="assets/css/print.css" type="text/css" media="print"/>
+		<!-- end: CORE CSS -->
+		<link rel="shortcut icon" href="favicon.ico" />
+	</head>
+	<!-- end: HEAD -->
+	<!-- start: BODY -->
+	<body class="sidebar-close horizontal-menu-fixed" style="display:none">
+	 <form id='frmAyuda' name='frmAyuda' enctype="multipart/form-data" method="post"> 
+		<div class="main-wrapper">
+			<!-- start: TOPBAR -->
+			<header class="topbar navbar navbar-inverse navbar-fixed-top inner">
+				<!-- start: TOPBAR CONTAINER -->
+				<div class="container">
+					<div class="navbar-header">
+						<a class="sb-toggle-left hidden-md hidden-lg" href="#main-navbar">
+							<i class="fa fa-bars"></i>
+						</a>
+						<!-- start: LOGO -->
+						<a class="navbar-brand" href="index.html">
+							<img src="assets/images/logo.png" alt="Organizacion OCBP"/>
+						</a>
+						<!-- end: LOGO -->
+					</div>
+				</div>
+				<!-- end: TOPBAR CONTAINER -->
+			</header>
+			<!-- end: TOPBAR -->
+			<!-- start: MAIN CONTAINER -->
+			<div class="main-container inner">
+				<!-- start: PAGE -->
+				<div class="main-content">
+					<div class="container">
+						<!-- start: PAGE HEADER -->
+						<!-- start: TOOLBAR -->
+						<div class="toolbar row">
+							<div class="col-sm-6 hidden-xs">
+								<div class="page-header">
+									<h1>App O.C.B.P.<small>Aplicaci&oacute;n de la Clinica Bonadonna Prevenir</small></h1>
+								</div>
+							</div>
+							<div class="col-sm-6 col-xs-12">
+								<a href="#" class="back-subviews">
+									<i class="fa fa-chevron-left"></i> BACK
+								</a>
+								<a href="#" class="close-subviews">
+									<i class="fa fa-times"></i> CLOSE
+								</a>
+								<div class="toolbar-tools pull-right">
+									<!-- start: TOP NAVIGATION MENU -->
+									<ul class="nav navbar-right">
+										<!-- start: TO-DO DROPDOWN -->
+										<li>
+											<a href="index.html">
+												<i class="fa fa-home"></i> Inicio
+											</a>
+										</li>
+									</ul>
+									<!-- end: TOP NAVIGATION MENU -->
+								</div>
+							</div>
+						</div>
+						<!-- end: TOOLBAR -->
+						<!-- end: PAGE HEADER -->
+						<!-- start: PAGE CONTENT-->
+						<div class="row">
+							<div class="col-md-12">
+								<div class="panel panel-white">
+									<div class="panel-body"> 
+											<div class='row'>
+												<div class="col-md-12">
+													<center><img src='assets/images/nuevologo.png'><br><br></center>
+													<div class="panel-group accordion" id="accordion">
+														<div class="panel panel-white">
+															<div class="panel-heading">
+																<h5 class="panel-title">
+																<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+																	<i class="icon-arrow"></i> Elija un servicio
+																</a></h5>
+															</div>
+															<div id="collapseOne" class="panel-collapse collapse in">
+																<div class="panel-body">	
+																	<div id="divCategorias" name="divCategorias">
+																		<select id="mnuCategorias" name="mnuCategorias" class="form-control">
+																		</select>
+																	</div>
+																	<div id="divResultados" name="divResultados" style="display:none">
+																		<h4>Especialidades</h4>
+																		<div class="form-group">													
+																			<select id="mnuEspecialidades" name="mnuEspecialidades" class="form-control" >
+																			</select>
+																		</div>
+																	</div>
+																	<div id="divLstServicios" name="divLstServicios" style="display:none">
+																		<a style="display:none" id="enlServicio" name="enlServicio" class="btn btn-default" href="id=S-1" role="button"></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-white">
+															<div class="panel-heading">
+																<h5 class="panel-title">
+																<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+																	<i class="icon-arrow"></i> Necesito ayuda
+																</a></h5>
+															</div>
+															<div id="collapseTwo" class="panel-collapse collapse">
+																<div class="panel-body" id="pnlAyuda" name="pnlAyuda">
+																	<div class="form-group">
+																		<select id="mnuTipoAyuda" name="mnuTipoAyuda" class="form-control">
+																			<option value="" selected disabled>&iquest;Qu&eacute; tipo de ayuda requiere?</option>
+																			<option value="Formula Medica">Con mi fórmula médica</option>
+																			<option value="Nueva Consulta">Con una nueva consulta</option>
+																			<option value="Otro Tipo Ayuda">Otro tipo de ayuda</option>
+																		</select>
+																	</div>																	
+																	<div class="form-group">
+																		<input id='txtImagen2' name='txtImagen2' type='file' class="form-control" style="display:none">
+																	</div>
+																	<div class="form-group">
+																		<textarea class="form-control" id='txtObservacion' name='txtObservacion' rows='2' placeholder='Escriba opcionalmente una observaci&oacute;n complementaria'></textarea>
+																	</div>
+																	<p>Si usted tiene alguna imagen como una f&oacute;rmula m&eacute;dica o una orden, puede anexarla</p>
+																	<div class="form-group" align="right">																	
+																		<button data-target=".bs-example-modal-basic" data-toggle="modal" class="btn btn-default">
+																			Subir imagen 
+																		</button>
+																		<button class="btn btn-info" type="button" id="btnAyuda" name="btnAyuda">
+																			Enviar informaci&oacute;n
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-white">
+															<div class="panel-heading">
+																<h5 class="panel-title">
+																<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+																	<i class="icon-arrow"></i> Tengo el código del servicio
+																</a></h5>
+															</div>
+															<div id="collapseThree" class="panel-collapse collapse">
+																<div class="panel-body">
+																	<p>Escriba a continuaci&oacute;n el c&oacute;digo del servicio a buscar</p>
+																	<div class="form-group">
+																		<input id='txtCodServicio' name='txtCodServicio' type='text' class="form-control">
+																	</div>	
+																	<div class="form-group" align="right">																	
+																		<button class="btn btn-info" type="button" id="btnConsultar" name="btnConsultar">
+																			Consultar Servicio
+																		</button>
+																	</div>																		
+																	<div class="form-group" id="divServicioCod" name="divServicioCod">
+																	</div>
+																</div>
+															</div>
+														</div>														
+													</div>												
+												</div>
+											</div>
+											<div class="rows">
+												<br>
+											</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end: PAGE CONTENT-->
+					</div>
+					<div class="subviews">
+						<div class="subviews-container"></div>
+					</div>
+				</div>
+				<!-- end: PAGE -->
+			</div>
+			<!-- end: MAIN CONTAINER -->
+			<!-- start: FOOTER -->
+			<footer class="inner">
+				<div class="footer-inner">
+					<div class="pull-left">
+						2017 &copy; Proceneg by Creatividata
+					</div>
+					<div class="pull-right">
+						<span class="go-top"><i class="fa fa-chevron-up"></i></span>
+					</div>
+				</div>
+			</footer>
+			<!-- end: FOOTER -->
+			<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal bs-example-modal-basic fade" id="modFile" name="modFile">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button aria-hidden="true" data-dismiss="modal" class="close" type="button">
+								×
+							</button>
+							<h4 id="myModalLabel" class="modal-title">Imagen de F&oacute;rmula M&eacute;dica</h4>
+						</div>
+						<div class="modal-body">
+							<div class="fileupload fileupload-new" data-provides="fileupload">
+								<div class="fileupload-new thumbnail"><img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA?text=no+image" alt=""/>
+								</div>
+								<div class="fileupload-preview fileupload-exists thumbnail"></div>
+								<div>
+									<span class="btn btn-light-grey btn-file"><span class="fileupload-new"><i class="fa fa-picture-o"></i> Seleccionar imagen</span><span class="fileupload-exists"><i class="fa fa-picture-o"></i> Cambiar</span>
+										<input type="file" id="txtImagen" name="txtImagen">
+									</span>
+									<a href="#" class="btn fileupload-exists btn-light-grey" data-dismiss="fileupload">
+										<i class="fa fa-times"></i> Eliminar
+									</a>
+								</div>
+							</div>						
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-info" type="button" id="btnCargar" name="btnCargar">
+								Cargar
+							</button>
+							<button data-dismiss="modal" class="btn btn-default" type="button">
+								Cerrar
+							</button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+
+		</div>
+		</form>
+		<!-- start: MAIN JAVASCRIPTS -->
+		<!--[if lt IE 9]>
+		<script src="assets/plugins/respond.min.js"></script>
+		<script src="assets/plugins/excanvas.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/jQuery/jquery-1.11.1.min.js"></script>
+		<![endif]-->
+		<!--[if gte IE 9]><!-->
+		<script src="assets/plugins/jQuery/jquery-2.1.1.min.js"></script>
+		<!--<![endif]-->
+		<script src="assets/plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js"></script>
+		<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+		<script src="assets/plugins/blockUI/jquery.blockUI.js"></script>
+		<script src="assets/plugins/iCheck/jquery.icheck.min.js"></script>
+		<script src="assets/plugins/moment/min/moment.min.js"></script>
+		<script src="assets/plugins/perfect-scrollbar/src/jquery.mousewheel.js"></script>
+		<script src="assets/plugins/perfect-scrollbar/src/perfect-scrollbar.js"></script>
+		<script src="assets/plugins/bootbox/bootbox.min.js"></script>
+		<script src="assets/plugins/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+		<script src="assets/plugins/ScrollToFixed/jquery-scrolltofixed-min.js"></script>
+		<script src="assets/plugins/jquery.appear/jquery.appear.js"></script>
+		<script src="assets/plugins/jquery-cookie/jquery.cookie.js"></script>
+		<script src="assets/plugins/velocity/jquery.velocity.min.js"></script>
+		<script src="assets/plugins/TouchSwipe/jquery.touchSwipe.min.js"></script>
+		<!-- end: MAIN JAVASCRIPTS -->
+		<!-- start: JAVASCRIPTS REQUERIDOS FOR SUBVIEW CONTENTS -->
+		<script src="assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+		<script src="assets/plugins/jquery-mockjax/jquery.mockjax.js"></script>
+		<script src="assets/plugins/toastr/toastr.js"></script>
+		<script src="assets/plugins/bootstrap-modal/js/bootstrap-modal.js"></script>
+		<script src="assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js"></script>
+		<script src="assets/plugins/fullcalendar/fullcalendar/fullcalendar.min.js"></script>
+		<script src="assets/plugins/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+		<script src="assets/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+		<script src="assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+		<script src="assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.js"></script>
+		<script src="assets/plugins/DataTables/media/js/jquery.dataTables.min.js"></script>
+		<script src="assets/plugins/DataTables/media/js/DT_bootstrap.js"></script>
+		<script src="assets/plugins/truncate/jquery.truncate.js"></script>
+		<script src="assets/plugins/summernote/dist/summernote.min.js"></script>
+		<script src="assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+		<script src="assets/js/subview.js"></script>
+		<script src="assets/js/subview-examples.js"></script>
+		<!-- end: JAVASCRIPTS REQUERIDOS FOR SUBVIEW CONTENTS -->
+		<!-- start: JAVASCRIPTS REQUERIDOS SOLO PARA ESTA PAGINA -->
+		<script src="assets/plugins/holder/holder.js"></script>
+		<script src="assets/js/form-validation-ped.js"></script>
+		<script src="assets/plugins/ckeditor/ckeditor.js"></script>
+		<script src="assets/plugins/ckeditor/adapters/jquery.js"></script>
+		<!-- end: JAVASCRIPTS REQUERIDOS SOLO PARA ESTA PAGINA -->
+		<script src="assets/js/main.js"></script>
+		<!-- <script language="javascript" src="assets/js/jquery.js"></script> -->
+		<script language="javascript">
+			jQuery(document).ready(function() {
+				Main.init();
+				$("body").fadeIn(1000);
+				 
+				$.ajax({
+						type: "POST",
+						url: 'http://www.creatividata.com/www/ocbp.mov/ws/lstCtgServicios.php?cat=L-1', 
+						success: function(response)
+						{
+							$('#divCategorias').html("Cargando...");
+							$('#divCategorias').html(response).fadeIn();
+						},
+						error: function(jqXHR, textStatus, errorThrown) {
+							$("#divCategorias").html("Respuesta: "+response+"; Error detectado: " + textStatus + "\nExcepcion: " + errorThrown);
+						}	
+				});
+
+				$(document).on("change","#mnuCategorias",function(event)
+				{
+					$("#divResultados").show();
+					$("#divFormulario").hide();
+					$("#divLstServicios").hide();
+					var idpadre = $(this).find(':selected').val();
+					$("#divResultados").html("Cargando...");
+					$.ajax({url: 'http://www.creatividata.com/www/ocbp.mov/ws/lstCtgServicios.php?cat='+idpadre, 
+						success: function(result){
+							$("#divResultados").html(result);
+						},
+						error: function(xhr) {
+							var response = xhr.responseText;
+							var statusMessage = xhr.status + ' ' + xhr.statusText;
+							var message  = 'Query failed, php script returned this status: ';
+							var message = message + statusMessage + ' response: ' + response;
+							alert(message);
+						}				
+					});
+				});
+
+				$(document).on("change","#mnuEspecialidades",function(event)
+				{
+					var id = $(this).find(':selected').val();					
+					$("#divLstServicios").html("Cargando...");
+					$.ajax({url: 'http://www.creatividata.com/www/ocbp.mov/ws/lstCtgServicios.php?cat='+id, 
+						success: function(result){
+							$("#divLstServicios").html(result);
+							$("#divLstServicios").show();
+						},
+						error: function(jqXHR, textStatus, errorThrown) {
+							$("#divLstServicios").html("Error detectado: " + textStatus + "\nExcepcion: " + errorThrown);
+						}						
+					});
+				});
+				
+				$(document).on("click","#enlServicio",function(event) {					
+					window.open('formulario.html?serv='+$(this).data('url'),'_parent');
+				});
+				
+				$(document).on("click","#btnCargar",function(event) {					
+					if (document.getElementById('txtImagen').value=='') {
+						alert('Debe cargar primero una imagen.');
+					} else {
+						$('#modFile').modal('hide');
+					}
+				});
+				
+				$(document).on("click","#btnAyuda",function(event) {					
+					if (document.getElementById('mnuTipoAyuda').value=='') {
+						alert('Seleccione por favor el tipo de ayuda quiere para poder continuar.');
+					} else {
+						$.ajax({
+							type: 'POST', 
+							data: new FormData($('#frmAyuda')[0]),
+							contentType: false,
+							cache: false,
+							processData:false,						
+							url: "http://www.creatividata.com/www/ocbp.mov/ws/lstCtgServicios.php?cat=M-"+ $("#txtCodServicio").val(), 
+							success: function(result){
+								$("#pnlAyuda").html(result);
+							},
+							error: function(jqXHR, textStatus, errorThrown) {
+								$("#pnlAyuda").html("Error detectado: " + textStatus + "\nExcepcion: " + errorThrown);
+							}						
+						});
+					}
+				});
+				
+				$(document).on("click","#btnConsultar",function(event) {				
+					$.ajax({url: "http://www.creatividata.com/www/ocbp.mov/ws/lstCtgServicios.php?cat=G-"+ $("#txtCodServicio").val(), 
+						success: function(result){ 
+							$("#divServicioCod").html(result);
+						},
+						error: function(jqXHR, textStatus, errorThrown) {
+							$("#divServicioCod").html("Error detectado: " + textStatus + "\nExcepcion: " + errorThrown);
+						}						
+					});
+				
+				});
+			});
+		</script>
+	</body>
+	<!-- end: BODY -->
+</html>
+
+
+
